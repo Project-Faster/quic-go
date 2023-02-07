@@ -15,8 +15,8 @@ const (
 	initialMaxDatagramSize     = protocol.ByteCount(protocol.InitialPacketSizeIPv4)
 	maxBurstPackets            = 3
 	renoBeta                   = 0.7 // Reno backoff factor.
-	minCongestionWindowPackets = 2
-	initialCongestionWindow    = 32
+	minCongestionWindowPackets = 64
+	initialCongestionWindow    = 512
 )
 
 type cubicSender struct {
@@ -186,6 +186,7 @@ func (c *cubicSender) OnPacketAcked(
 	if c.InSlowStart() {
 		c.hybridSlowStart.OnPacketAcked(ackedPacketNumber)
 	}
+	utils.DefaultLogger.Infof("Cwnd: %d, Bytes_in_flght: %d", c.congestionWindow, priorInFlight)
 }
 
 func (c *cubicSender) OnPacketLost(packetNumber protocol.PacketNumber, lostBytes, priorInFlight protocol.ByteCount) {
@@ -227,6 +228,7 @@ func (c *cubicSender) maybeIncreaseCwnd(
 		c.maybeTraceStateChange(logging.CongestionStateApplicationLimited)
 		return
 	}
+	utils.DefaultLogger.Infof("cwnd: %d, max_cwnd: %d", c.congestionWindow, c.maxCongestionWindow)
 	if c.congestionWindow >= c.maxCongestionWindow() {
 		return
 	}
@@ -248,6 +250,7 @@ func (c *cubicSender) maybeIncreaseCwnd(
 	} else {
 		c.congestionWindow = utils.Min(c.maxCongestionWindow(), c.cubic.CongestionWindowAfterAck(ackedBytes, c.congestionWindow, c.rttStats.MinRTT(), eventTime))
 	}
+
 }
 
 func (c *cubicSender) isCwndLimited(bytesInFlight protocol.ByteCount) bool {
