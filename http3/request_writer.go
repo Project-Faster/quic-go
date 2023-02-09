@@ -14,9 +14,9 @@ import (
 	"golang.org/x/net/http2/hpack"
 	"golang.org/x/net/idna"
 
-	"github.com/quic-go/qpack"
-	"github.com/quic-go/quic-go"
-	"github.com/quic-go/quic-go/internal/utils"
+	"github.com/Project-Faster/qpack"
+	"github.com/Project-Faster/quic-go"
+	"github.com/Project-Faster/quic-go/internal/utils"
 )
 
 const bodyCopyBufferSize = 8 * 1024

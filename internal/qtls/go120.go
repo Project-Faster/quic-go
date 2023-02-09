@@ -8,8 +8,6 @@ import (
 	"crypto/tls"
 	"net"
 	"unsafe"
-
-	"github.com/quic-go/qtls-go1-20"
 )
 
 type (
@@ -83,7 +81,7 @@ type cipherSuiteTLS13 struct {
 	Hash   crypto.Hash
 }
 
-//go:linkname cipherSuiteTLS13ByID github.com/quic-go/qtls-go1-20.cipherSuiteTLS13ByID
+//go:linkname cipherSuiteTLS13ByID github.com/Project-Faster/qtls-go1-20.cipherSuiteTLS13ByID
 func cipherSuiteTLS13ByID(id uint16) *cipherSuiteTLS13
 
 // CipherSuiteTLS13ByID gets a TLS 1.3 cipher suite.

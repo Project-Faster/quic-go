@@ -14,14 +14,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/quic-go/quic-go/internal/handshake"
-	mocklogging "github.com/quic-go/quic-go/internal/mocks/logging"
-	"github.com/quic-go/quic-go/internal/protocol"
-	"github.com/quic-go/quic-go/internal/qerr"
-	"github.com/quic-go/quic-go/internal/testdata"
-	"github.com/quic-go/quic-go/internal/utils"
-	"github.com/quic-go/quic-go/internal/wire"
-	"github.com/quic-go/quic-go/logging"
+	"github.com/Project-Faster/quic-go/internal/handshake"
+	mocklogging "github.com/Project-Faster/quic-go/internal/mocks/logging"
+	"github.com/Project-Faster/quic-go/internal/protocol"
+	"github.com/Project-Faster/quic-go/internal/qerr"
+	"github.com/Project-Faster/quic-go/internal/testdata"
+	"github.com/Project-Faster/quic-go/internal/utils"
+	"github.com/Project-Faster/quic-go/internal/wire"
+	"github.com/Project-Faster/quic-go/logging"
 
 	"github.com/golang/mock/gomock"
 
