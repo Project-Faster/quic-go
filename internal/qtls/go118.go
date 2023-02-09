@@ -8,6 +8,8 @@ import (
 	"crypto/tls"
 	"net"
 	"unsafe"
+
+	"github.com/quic-go/qtls-go1-18"
 )
 
 type (
