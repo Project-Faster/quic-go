@@ -17,11 +17,8 @@ import (
 	"github.com/Project-Faster/quic-go/internal/utils"
 	"github.com/Project-Faster/quic-go/quicvarint"
 
-	"github.com/Project-Faster/qpack"
 	"github.com/golang/mock/gomock"
-
-	. "github.com/onsi/ginkgo/v2"
-	. "github.com/onsi/gomega"
+	"github.com/quic-go/qpack"
 )
 
 var _ = Describe("Client", func() {

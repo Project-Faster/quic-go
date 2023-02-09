@@ -19,7 +19,7 @@ import (
 	"github.com/Project-Faster/quic-go/internal/utils"
 	"github.com/Project-Faster/quic-go/quicvarint"
 
-	"github.com/Project-Faster/qpack"
+	"github.com/quic-go/qpack"
 )
 
 // allows mocking of quic.Listen and quic.ListenAddr

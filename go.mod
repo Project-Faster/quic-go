@@ -7,10 +7,10 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/onsi/ginkgo/v2 v2.2.0
 	github.com/onsi/gomega v1.20.1
-	github.com/Project-Faster/qpack v0.4.0
-	github.com/Project-Faster/qtls-go1-18 v0.2.0
-	github.com/Project-Faster/qtls-go1-19 v0.2.0
-	github.com/Project-Faster/qtls-go1-20 v0.1.0
+	github.com/quic-go/qpack v0.4.0
+	github.com/quic-go/qtls-go1-18 v0.2.0
+	github.com/quic-go/qtls-go1-19 v0.2.0
+	github.com/quic-go/qtls-go1-20 v0.1.0
 	golang.org/x/crypto v0.4.0
 	golang.org/x/exp v0.0.0-20221205204356-47842c84f3db
 	golang.org/x/net v0.4.0

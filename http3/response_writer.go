@@ -10,7 +10,7 @@ import (
 	"github.com/Project-Faster/quic-go"
 	"github.com/Project-Faster/quic-go/internal/utils"
 
-	"github.com/Project-Faster/qpack"
+	"github.com/quic-go/qpack"
 )
 
 type responseWriter struct {

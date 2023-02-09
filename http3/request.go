@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Project-Faster/qpack"
+	"github.com/quic-go/qpack"
 )
 
 func requestFromHeaders(headers []qpack.HeaderField) (*http.Request, error) {
